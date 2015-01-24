@@ -1,8 +1,3 @@
-package pp.test3_2.bier;
-
-import java.util.HashMap;
-import java.util.Objects;
-
 /**
  * Created by eiabea on 1/24/15.
  */

@@ -1,5 +1,3 @@
-package pp.test3_2.bier;
-
 import com.sun.org.apache.regexp.internal.REUtil;
 
 /**
