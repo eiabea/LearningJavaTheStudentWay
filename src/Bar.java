@@ -8,11 +8,18 @@ public class Bar {
 
         Beer seidl = new Seidel("Wieselburger");
         Beer kruegerl = new Kruegerl("Stiegl");
+        Beer kruegerl2 = new Kruegerl("Stiegl");
+        Beer seidl2 = new Seidel("Wieselburger");
 
-        slug(drunkenness, seidl, 340);
-        slug(drunkenness, kruegerl, 540);
+//        slug(drunkenness, seidl, 340);
+//        slug(drunkenness, kruegerl, 540);
+//        slug(drunkenness, seidl2, 331);
+//        slug(drunkenness, kruegerl2, 560);
 
         System.out.println("Drunkness: \n" + drunkenness.toString() + "\nTotal: " + drunkenness.getTotal() + "ml");
+
+        System.out.println("First Stiegl Index: " + drunkenness.firstIndexByBrewery("Stiegl"));
+        System.out.println("Last Stiegl Index: " + drunkenness.lastIndexByBrewery("Stiegl"));
 
     }
 

@@ -15,6 +15,10 @@ public class Drunkenness {
     @Override
     public String toString() {
 
+        if(first == null){
+            return "You are not drunk...yet";
+        }
+
         Beer tmp = first;
         String output = "";
 
@@ -34,5 +38,21 @@ public class Drunkenness {
         }
 
         return 0;
+    }
+
+    public int lastIndexByBrewery(String brewery){
+        if(first != null){
+            return first.lastIndexByBrewery(brewery);
+        }
+
+        return -1;
+    }
+
+    public int firstIndexByBrewery(String brewery){
+        if(first != null){
+            return first.firstIndexByBrewery(brewery);
+        }
+
+        return -1;
     }
 }

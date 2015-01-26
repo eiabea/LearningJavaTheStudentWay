@@ -64,4 +64,47 @@ public abstract class Beer implements DrinkInterface {
     public String toString() {
         return String.format("%20s | %10sml | %10sml", getBrewery(), getTotalContent(), getContent());
     }
+
+    public int lastIndexByBrewery(String brewery) {
+        return lastIndexByBreweryRec(brewery, 0);
+    }
+
+    private int lastIndexByBreweryRec(String brewery, int index) {
+        int deep = -1;
+
+        if (this.getNext() != null) {
+            deep = this.getNext().lastIndexByBreweryRec(brewery, index + 1);
+        }
+
+        if (deep != -1) {
+            return deep;
+        } else {
+            if (this.brewery.equals(brewery)) {
+                return index;
+            } else {
+                return -1;
+            }
+
+        }
+
+    }
+
+    public int firstIndexByBrewery(String name){
+
+        return firstIndexByBreweryRec(name, 0);
+
+    }
+
+    private int firstIndexByBreweryRec(String name, int index){
+
+        if(this.brewery == name){
+            return index;
+        }
+
+        if(getNext() != null){
+            return getNext().firstIndexByBreweryRec(name, index + 1);
+        }
+
+        return -1;
+    }
 }
